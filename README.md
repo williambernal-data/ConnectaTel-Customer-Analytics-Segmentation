@@ -9,6 +9,8 @@
 
 This project analyzes customer demographics and service consumption patterns for a telecommunications provider, ConnectaTel. The analysis combines customer profile information with usage records to identify customer segments, evaluate data quality, detect unusual consumption behaviors, and generate business recommendations aimed at improving customer value and commercial performance.
 
+> **Note:** the underlying datasets are not included in this repository. The notebook is provided with all outputs (tables, charts, and results) already generated, so the full analysis can be reviewed without re-running the code.
+
 ---
 
 ## Business Problem
@@ -27,7 +29,7 @@ The objective of this project is to:
 
 ## Datasets
 
-The project integrates three structured datasets:
+The project integrates three structured datasets (not included in this repository — see note above):
 
 ### 1. plans.csv
 Contains plan specifications and pricing information.
@@ -116,16 +118,8 @@ Python · Pandas · NumPy · Matplotlib · Seaborn · Jupyter Notebook
 ```
 ConnectaTel-Customer-Analytics-Segmentation/
 │
-├── data/
-│   ├── plans.csv
-│   ├── users.csv
-│   └── usage.csv
-│
 ├── notebooks/
-│   └── connectatel_analysis.ipynb
-│
-├── images/
-│   └── (exported visualizations)
+│   └── connectatel_analysis.ipynb   (includes all outputs)
 │
 ├── LICENSE
 ├── README.md
@@ -134,50 +128,11 @@ ConnectaTel-Customer-Analytics-Segmentation/
 
 ---
 
-## Running the Project
+## Reviewing the Analysis
 
-### Option 1: Google Colab
-1. Upload the notebook to Google Colab.
-2. Upload the datasets into the Colab environment.
-3. Update file paths if necessary.
-4. Run all notebook cells sequentially.
+The notebook (`notebooks/connectatel_analysis.ipynb`) includes all outputs already generated — tables, charts, and results are visible directly on GitHub without needing to run any code.
 
-### Option 2: Local Environment
-
-Clone the repository:
-
-```
-git clone https://github.com/williambernal-data/ConnectaTel-Customer-Analytics-Segmentation.git
-cd ConnectaTel-Customer-Analytics-Segmentation
-```
-
-Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-Launch Jupyter Notebook:
-
-```
-jupyter notebook
-```
-
-Open `notebooks/connectatel_analysis.ipynb` and run all cells.
-
----
-
-## Reproducibility Guide
-
-To reproduce the analysis:
-
-1. Download or clone the repository.
-2. Place the datasets inside the `/data` folder.
-3. Install project dependencies.
-4. Execute the notebook from top to bottom.
-5. Review generated visualizations and business insights.
-
-The notebook is fully reproducible and includes all cleaning, transformation, analysis, and visualization steps required to generate the final results.
+To re-run the analysis with your own data, the notebook expects three CSV files (`plans.csv`, `users.csv`, `usage.csv`) matching the schema described above, loaded from a local `/data` folder.
 
 ---
 
